@@ -1,0 +1,142 @@
+/* IMPORT */
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+/* BEGINNING OF MY CSS CODE*/
+* {
+  padding: 0;
+  box-sizing: border-box;
+  color: black;
+}
+
+body {
+  font-family: Manrope; /* Sets the font family for body elements */
+  font-weight: 200; /* Sets font weight for all body elements */
+  height: 100%; /* Sets body heingh to 100% of the viewport*/
+  width: 100%; /* Sets the body to 100% of the viewport */
+  box-sizing: content-box; /* Uses content-box for box sizing */
+  position: relative; /* position relative so that the child elements can expand when required to 100% of the window*/
+  background-color: #9b82c51b;
+}
+
+header {
+  width: 200px; /*sets header widtch to 200px */
+  position: fixed;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-image: url(images/pearl\ background.jpeg)
+}
+h1 {
+  text-align: center;
+  padding: 20px;
+}
+
+
+nav {
+  /*height: 100%;
+  top: 0;*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 80px; /*Adjust padding to center links vertically */
+}
+
+a {
+  color: black;
+  padding: 20px;
+  text-decoration: none;
+  width: 100%;
+  text-align: center;
+
+}
+a.active {
+  background: #ffffff;
+}
+a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+main {
+  margin-left: 200px; /* Adjust for the width of the fixed header */
+  padding: 20px; /* Add padding for spacing */ 
+}
+.about-me {
+  display: flex; /* arranges sections horizontally */
+  align-items: center; /*centers items vertically */
+  margin-bottom: 40px; /* space between sections */
+  /* border: 1px solid red; */
+  justify-content: space-evenly;
+  height: 400px;
+}
+
+.profile-image {
+  width: 45%; /* adjusts image width */
+  height: auto; /* maitains the aspect ratio */
+  margin-right: 20; /* Space between image and text */
+}
+
+.about-me-text-container{
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+  height: 90%;
+  margin-left: 20px;
+  /* border: 1px solid red; */
+}
+
+.flex-item {
+  /* border: 1px solid blue; */
+  text-align: center;
+
+}
+
+.am-header {
+  flex-grow: 1;
+}
+
+.am-text {
+  flex-grow: 3;
+}
+
+.applications, .contact-me {
+  margin-top: 40px; /* this is the space btwn sections */
+}
+
+
+/* On screens that are less than 700px wide, this will make the sidebar into a topbar */
+@media screen and (max-width: 700px) {
+  header {
+    width: 100%;
+    display: flex;
+    position: fixed;
+    margin: 0;
+    flex-direction: column;
+    height: fit-content;
+  }
+  h1 {
+    height: fit-content;
+    padding-bottom: 10px;
+    margin: 0px;
+  }
+  nav {
+    padding: 0px;
+  }
+a {
+  padding: 8px;
+  margin-bottom: 8px;
+
+}
+  main {
+    padding-top: 235px;
+    margin-left: 0;
+  }
+  .about-me {
+    flex-direction: column; /* this will stack the sections vertically on smller screens */
+  }
+  .about-me img {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
