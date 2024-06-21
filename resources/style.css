@@ -1,0 +1,240 @@
+/* IMPORT */
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+:root {
+  --primary-color: #bbdbfda1;
+}
+
+/* BEGINNING OF MY CSS CODE*/
+* {
+  padding: 0;
+  box-sizing: border-box;
+  color: #202020;
+  font-size: 18px;
+}
+
+body {
+  font-family: Manrope;
+  /* Sets the font family for body elements */
+  font-weight: 200;
+  /* Sets font weight for all body elements */
+  height: 100%;
+  /* Sets body heingh to 100% of the viewport*/
+  width: 100%;
+  /* Sets the body to 100% of the viewport */
+  box-sizing: content-box;
+  /* Uses content-box for box sizing */
+  position: relative;
+  /* position relative so that the child elements can expand when required to 100% of the window*/
+  background-color: #d7a3dc2e;
+}
+
+header {
+  width: 200px;
+  /*sets header widtch to 200px */
+  position: fixed;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-image: url(images/pearl\ background.jpeg)
+}
+
+h1 {
+  text-align: center;
+  padding: 15px 0px;
+  font-weight: 600;
+  font-size: 30px;
+  color: #202020;
+}
+
+
+nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 80px;
+  /*Adjust padding to center links vertically */
+}
+
+a {
+  color: black;
+  padding: 20px;
+  text-decoration: none;
+  width: 100%;
+  text-align: center;
+
+}
+
+a.active {
+  background: #ffffff;
+}
+
+a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+main {
+  margin-left: 200px;
+  /* Adjust for the width of the fixed header */
+  padding: 20px;
+  /* Add padding for spacing */
+}
+
+.about-me {
+  display: flex;
+  /* arranges sections horizontally */
+  align-items: center;
+  /*centers items vertically */
+  margin-bottom: 40px;
+  /* space between sections */
+  /* border: 1px solid red; */
+  justify-content: space-evenly;
+  height: 400px;
+}
+
+.profile-image {
+  width: auto;
+  /* adjusts image width */
+  height: 90%;
+  /* maitains the aspect ratio */
+  margin: 0 20px;
+  /* Space between image and text */
+  border-radius: 15px;
+}
+
+.about-me-text-container {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+  height: 90%;
+  margin: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+  text-align: center;
+  background-color: var(--primary-color);
+  border-radius: 15px;
+}
+.about-me-text-container p {
+  margin-left: 20px;
+}
+
+.am-text {
+  flex-grow: 3;
+}
+
+.sec-header {
+ 
+  text-align: center;
+  align-items: center;
+}
+
+
+.applications {
+  margin: 40px 20px;
+  padding: 20px;
+  background-color: var(--primary-color);
+  border-radius: 15px;
+
+}
+
+.applications p {
+  display: grid;
+  grid-template-columns: repeat(1, 2fr);
+  gap: 20px;
+}
+
+.contact-me {
+  padding: 20px;
+  background-color: var(--primary-color);
+  border-radius: 15px;
+  margin: 40px 20px;
+}
+
+.contact-links {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  justify-content: space-between;
+}
+
+.contact-links p {
+  text-align: right;
+}
+
+.project {
+  display: flex;
+  padding: 10px;
+  padding-left: 440px;
+  font-weight: 700;
+}
+
+footer {
+  text-align: center;
+}
+
+/* On screens that are less than 600px wide, this will make the sidebar into a topbar */
+@media screen and (max-width: 600px) {
+
+  /* Adjust header and body styles */
+  header {
+    width: 100%;
+    display: flex;
+    position: fixed;
+    margin: 0;
+    flex-direction: column;
+    height: fit-content;
+  }
+
+  body {
+    margin: 30px;
+  }
+
+  h1 {
+    height: fit-content;
+    padding-bottom: 10px;
+    margin: 0px;
+  }
+
+  nav {
+    padding: 0px;
+  }
+
+  /* This adjusts the main and about-me styles for stacking vertically */
+  main {
+    padding-top: 235px;
+    margin-left: 10px;
+    display: block;
+  }
+
+  .about-me {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+  }
+
+  .profile-image {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    /* Ensure rounded corners */
+  }
+
+  .about-me-text-container {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--primary-color);
+    border-radius: 15px;
+    margin-top: 10px;
+  }
+
+  .applications,
+  .contact-me {
+    margin: 20px 0;
+    padding: 15px;
+    background-color: var(--primary-color);
+    border-radius: 15px;
+  }
+}
